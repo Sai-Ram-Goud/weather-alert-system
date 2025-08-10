@@ -47,3 +47,31 @@ weather-alert-system/
 ├── iot-listener-func/        # Azure Function for IoT data
 ├── weatherCheck/             # Additional Azure Function(s)
 └── simulator.py              # Simulates IoT weather device
+
+
+⚙️ Setup
+1) Clone the repository
+
+git clone https://github.com/Sai-Ram-Goud/weather-alert-system.git
+cd weather-alert-system
+2) Frontend
+
+cd weather-dashboard
+npm install
+npm start
+3) Backend
+
+cd Backend
+npm install                         # If Node.js backend
+# OR
+pip install -r requirements.txt     # If Python Azure Functions
+4) Environment Variables
+Create a .env file in the project root:
+
+env
+
+
+AZURE_STORAGE_CONNECTION_STRING=your_connection_string_here
+5) Run Azure Functions locally (if used)
+
+func start
